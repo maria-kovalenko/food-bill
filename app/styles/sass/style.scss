@@ -31,6 +31,11 @@ body {
   line-height: 24px;
   font-family: "ProductSans-regular", sans-serif, serif;
   color: $gray-text;
+  background-image: url(../../../img/main-bg-sushi.png),
+    url(../../../img/black-bg.png);
+  background-position: 100% 0, 100% 0;
+  background-repeat: no-repeat no-repeat;
+  background-size: 59%, 41%;
 }
 
 img {
@@ -261,12 +266,25 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
 }
 
-.contacts__icon-time {
+.contacts__icon {
   width: 40px;
   height: 40px;
   margin: 0 auto;
   margin-bottom: 16px;
-  background: url(../../../img/icon-time.svg) center 50% no-repeat;
-  background-color: $bright-orange;
   border-radius: 50%;
+
+  &--time {
+    background: url(../../../img/icon-time.svg) center 50% no-repeat;
+    background-color: $bright-orange;
+  }
+
+  &--location {
+    background: url(../../../img/icon-location.svg) center 50% no-repeat;
+    background-color: $bright-orange;
+  }
+
+  &--phone {
+    background: url(../../../img/icon-phone.svg) center 50% no-repeat;
+    background-color: $bright-orange;
+  }
 }
