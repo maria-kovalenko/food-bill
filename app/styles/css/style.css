@@ -20,7 +20,7 @@ body {
   line-height: 24px;
   font-family: ProductSans-bold,sans-serif,serif;
   color: #888;
-  background-image: url(../../../img/main-bg-sushi.png),url(../../../img/black-bg.png),url(../../../img/htw-bg-sushi.png);
+  background-image: url(../../../img/main-bg-sushi.png),url(../../../img/black-bg-body.png),url(../../../img/htw-bg-sushi.png);
   background-position: 100% 0,100% 0,-15% 1190px;
   background-repeat: no-repeat,no-repeat,no-repeat;
   background-size: 59%,41%,60%
@@ -364,10 +364,13 @@ input[type=radio].visually-hidden {
   border: 2px Solid #eee;
   border-radius: 60px 0 60px 0
 }
-.services__list:nth-child(2) {
+.services__list:hover {
   border: none;
   -webkit-box-shadow: 5px 15px 45px 0 rgba(0,0,0,.1);
-  box-shadow: 5px 15px 45px 0 rgba(0,0,0,.1)
+  box-shadow: 5px 15px 45px 0 rgba(0,0,0,.1);
+  -webkit-transition: .2s ease-in;
+  -o-transition: .2s ease-in;
+  transition: .2s ease-in
 }
 .size {
   width: 80px;
@@ -381,7 +384,7 @@ input[type=radio].visually-hidden {
   font-family: ProductSans-regular,sans-serif,serif
 }
 .product {
-  margin-bottom: 200px
+  margin-bottom: 330px
 }
 .product__cards__wrapper {
   display: -webkit-box;
@@ -404,6 +407,13 @@ input[type=radio].visually-hidden {
   border-radius: 60px 0 60px 0;
   -webkit-box-shadow: 0 4px 20px 0 rgba(0,0,0,.07);
   box-shadow: 0 4px 20px 0 rgba(0,0,0,.07)
+}
+.product__cards:hover {
+  -webkit-box-shadow: 0 4px 30px 0 rgba(0,0,0,.3);
+  box-shadow: 0 4px 30px 0 rgba(0,0,0,.3);
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear
 }
 .product__image {
   border-radius: 60px 0 0 0;
@@ -429,9 +439,19 @@ input[type=radio].visually-hidden {
   font-size: 24px
 }
 .product__rating {
-  width: 40px;
+  position: relative;
+  width: 50px;
   font-size: 14px;
   text-align: end
+}
+.product__rating::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  left: 0;
+  background: url(../../../img/star.png) 50% 50% no-repeat
 }
 .product__group2 {
   display: -webkit-box;
@@ -443,7 +463,7 @@ input[type=radio].visually-hidden {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 0 20px
 }
 .product__btn {
@@ -455,4 +475,84 @@ input[type=radio].visually-hidden {
 }
 .product__button {
   text-align: center
+}
+.order {
+  margin-bottom: 197px
+}
+.order__bg {
+  height: 300px;
+  padding: 86px 0 0 29px;
+  border-radius: 60px 0 60px 0;
+  background: url(../../../img/black-bg-order.png)
+}
+.order__title {
+  width: 321px;
+  margin: 0;
+  margin-bottom: 50px;
+  color: #fff
+}
+.order__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly
+}
+.order__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 220px;
+  height: 80px;
+  padding: 0 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 13px
+}
+.order__button img {
+  width: 37px;
+  height: 40px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center
+}
+.order__text {
+  min-width: 110px;
+  margin: 0;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center
+}
+.up-text {
+  font-size: 11px
+}
+.down-text {
+  font-family: ProductSans-bold,sans-serif,serif;
+  font-size: 20px
+}
+.order__photo-menu {
+  width: 277px;
+  margin-top: -32%;
+  margin-right: 40px;
+  margin-left: 40px
+}
+.order__img-menu {
+  border-radius: 50px;
+  -webkit-box-shadow: 20px 28px 30px -20px rgba(0,0,0,.15);
+  box-shadow: 20px 28px 30px -20px rgba(0,0,0,.15)
+}
+.order__photo-details {
+  width: 277px;
+  margin-top: -27%;
+  margin-right: 40px;
+  border-radius: 50px;
+  -webkit-box-shadow: 20px 28px 30px -20px rgba(0,0,0,.15);
+  box-shadow: 20px 28px 30px -20px rgba(0,0,0,.15)
 }
