@@ -29,21 +29,30 @@ img {
   max-width: 100%;
   height: auto
 }
+p {
+  font-family: ProductSans-regular,sans-serif,serif
+}
 a {
   text-decoration: none;
   color: #000;
   cursor: pointer
+}
+a.button {
+  font-family: ProductSans-bold,sans-serif,serif
 }
 ul {
   padding: 0;
   margin: 0;
   list-style: none
 }
+button {
+  cursor: pointer
+}
 .button {
   display: inline-block;
   position: relative;
   padding: 12px 60px 12px 17px;
-  font-family: ProductSans-bold;
+  font-family: "ProductSans-bold, sans-serif, serif ";
   text-align: center;
   color: #fff;
   background-color: #f16214;
@@ -83,9 +92,6 @@ input[type=radio].visually-hidden {
 .container {
   width: 1170px;
   margin: 0 auto
-}
-.font-fam {
-  font-family: ProductSans-regular,sans-serif,serif
 }
 .page-header__nav {
   width: 847px;
@@ -167,6 +173,19 @@ input[type=radio].visually-hidden {
   line-height: 49px;
   color: #000
 }
+.section__position-title {
+  text-align: center
+}
+.section__name {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #f16214
+}
+.section__title {
+  margin: 0;
+  margin-bottom: 59px
+}
 .home {
   margin-bottom: 225px
 }
@@ -182,14 +201,13 @@ input[type=radio].visually-hidden {
   line-height: 91px
 }
 .home__description {
-  font-family: ProductSans-regular,sans-serif,serif;
   margin-top: 10px;
   margin-bottom: 0
 }
 .home__button {
   margin-top: 29px
 }
-.social__list {
+.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,14 +273,14 @@ input[type=radio].visually-hidden {
   border: 0
 }
 .contacts__title {
+  font-family: ProductSans-bold,sans-serif,serif;
   margin-top: 0;
   margin-bottom: 6px;
   color: #000
 }
 .contacts__description {
   margin: 0;
-  font-size: 13px;
-  font-family: ProductSans-regular,sans-serif,serif
+  font-size: 13px
 }
 .icon {
   width: 40px;
@@ -299,13 +317,9 @@ input[type=radio].visually-hidden {
   margin-bottom: 225px
 }
 .how-to-work__wrapper {
+  width: 570px;
+  margin-bottom: 40px;
   margin-left: auto
-}
-.how-to-work__subtitle {
-  margin-top: 0;
-  margin-bottom: 6px;
-  font-size: 14px;
-  color: #f16214
 }
 .how-to-work__title {
   width: 527px;
@@ -313,7 +327,6 @@ input[type=radio].visually-hidden {
   margin-bottom: 24px
 }
 .how-to-work__description {
-  font-family: ProductSans-regular,sans-serif,serif;
   margin: 0;
   margin-top: 10px
 }
@@ -323,23 +336,7 @@ input[type=radio].visually-hidden {
 .services {
   margin-bottom: 197px
 }
-.product__wrapper__title,
-.services__wrapper__title {
-  text-align: center
-}
-.product__name,
-.services__name {
-  margin-top: 0;
-  margin-bottom: 6px;
-  font-size: 14px;
-  color: #f16214
-}
-.product__title,
-.services__title {
-  margin: 0;
-  margin-bottom: 59px
-}
-.services__wrapper__advantages {
+.services__wrapper-advantages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,13 +377,10 @@ input[type=radio].visually-hidden {
   font-size: 26px;
   color: #000
 }
-.services__description {
-  font-family: ProductSans-regular,sans-serif,serif
-}
 .product {
   margin-bottom: 330px
 }
-.product__cards__wrapper {
+.product__cards-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,6 +517,11 @@ input[type=radio].visually-hidden {
   -ms-grid-row-align: center;
   align-self: center
 }
+.order__button:hover {
+  -webkit-box-shadow: inset 0 0 5px 2px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 5px 2px rgba(0,0,0,.5);
+  border: 1px solid #000
+}
 .order__text {
   min-width: 110px;
   margin: 0;
@@ -555,4 +554,177 @@ input[type=radio].visually-hidden {
   border-radius: 50px;
   -webkit-box-shadow: 20px 28px 30px -20px rgba(0,0,0,.15);
   box-shadow: 20px 28px 30px -20px rgba(0,0,0,.15)
+}
+.testimonials {
+  margin-bottom: 178px
+}
+.testimonials__title {
+  margin: 0;
+  margin-bottom: 24px
+}
+.testimonials__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.testimonials__left-wrapper {
+  width: 570px;
+  text-align: center;
+  padding: 94px 0
+}
+.testimonials__user-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 205px;
+  margin-bottom: 44px
+}
+.user {
+  margin-left: 15px
+}
+.user__name {
+  font-family: ProductSans-bold,sans-serif,serif;
+  font-size: 16px;
+  color: #000
+}
+.user__post {
+  font-size: 13px
+}
+.testimonials__text {
+  margin-top: 10px
+}
+.testimonials__btn-wrapper {
+  margin-top: 34px
+}
+.testimonials__button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  border: Solid 2px #eee;
+  cursor: pointer
+}
+.testimonials__button:hover {
+  background-color: #f16214;
+  border: none
+}
+.testimonials__button:hover path {
+  fill: #fff
+}
+.testimonials__button:hover line {
+  stroke: #fff
+}
+.testimonials__button-next {
+  margin-right: 30px
+}
+.testimonials__right-wrapper {
+  width: 570px
+}
+.subscribe {
+  margin-bottom: 100px
+}
+.subscribe__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0
+}
+.subscribe__image-wrapper {
+  position: absolute;
+  top: calc(50% - 250px);
+  width: 460px;
+  margin-left: 30px
+}
+.subscribe__text-wrapper {
+  width: 505px;
+  margin-left: auto;
+  margin-right: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px
+}
+.subscribe__title {
+  color: #fff;
+  margin: 0
+}
+.subscribe__description {
+  margin: 0;
+  margin-top: 15px
+}
+.form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 50px;
+  background-color: #fff;
+  border-radius: 10px
+}
+.subscribe__form {
+  min-height: 60px;
+  margin-top: 29px
+}
+.form-input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 60px;
+  outline: 0
+}
+.subscribe__input {
+  padding-right: 145px
+}
+.form-button {
+  min-width: 40px;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 5px;
+  min-height: 40px;
+  font-family: ProductSans-bold,sans-serif,serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #f16214;
+  border: none;
+  border-radius: 10px
+}
+.form-button:hover {
+  background-color: #e35000
+}
+.subscribe__button {
+  min-width: 120px;
+  top: calc(50% - 25px);
+  height: 50px
+}
+.page-footer {
+  min-height: 477px;
+  background-color: #f5f5f5
+}
+.page-footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 100px 0 136px 0
+}
+.page-footer__wrapper section {
+  width: 270px
+}
+.weinsocial__text {
+  margin: 0;
+  margin-top: 34px
 }
