@@ -20,6 +20,7 @@ $orange-hover: rgba(227, 80, 0, 1);
 $gray-text: rgba(136, 136, 136, 1);
 $bg-footer: rgba(245, 245, 245, 1);
 
+$mobile-width: 375px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
@@ -29,19 +30,30 @@ body {
   margin: 0 auto;
   padding: 0;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 26px;
   font-family: "ProductSans-bold", sans-serif, serif;
   color: $gray-text;
   background-image: url(../../../img/main-bg-sushi.png),
-    url(../../../img/black-bg-body.png), url(../../../img/htw-bg-sushi.png);
-  background-position: 100% 0, 100% 0, -15% 1190px;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 59%, 41%, 60%;
+    url(../../../img/black-bg-body.png), url(../../../img/htw-bg-sushi.png),
+    url(../../../app/img/testimonals-bg.png);
+  background-position: 100% 0, 100% 0, -15% 18%, 0 76%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 59%, 41%, 60%, 18%;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 p {
@@ -58,11 +70,6 @@ a.button {
   font-family: "ProductSans-bold", sans-serif, serif;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
 button {
   cursor: pointer;
 }
@@ -121,10 +128,6 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 }
 
-// .font-fam {
-//   font-family: "ProductSans-regular", sans-serif, serif;
-// }
-
 // ------------------------ page-header -------------------------
 
 .page-header__nav {
@@ -132,7 +135,7 @@ input[type="radio"].visually-hidden {
 
   min-height: 45px;
   margin-top: 30px;
-  margin-bottom: 140px;
+  margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,7 +161,7 @@ input[type="radio"].visually-hidden {
 
 .page-header__item a {
   &:hover {
-    color: $gray-text;
+    color: $bright-orange;
   }
 
   &:active {
@@ -229,7 +232,7 @@ input[type="radio"].visually-hidden {
 // ------------------------ home -------------------------
 
 .home {
-  margin-bottom: 225px;
+  margin-bottom: 200px;
 }
 
 .home__wrapper {
@@ -260,7 +263,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   width: 570px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
 .social__item {
@@ -367,7 +370,7 @@ input[type="radio"].visually-hidden {
 // ------------------------ how-to-work -------------------------
 
 .how-to-work {
-  margin-bottom: 225px;
+  margin-bottom: 170px;
 }
 
 .how-to-work__wrapper {
@@ -394,7 +397,7 @@ input[type="radio"].visually-hidden {
 // ------------------------ services -------------------------
 
 .services {
-  margin-bottom: 197px;
+  margin-bottom: 150px;
 }
 
 .services__wrapper-advantages {
@@ -436,7 +439,7 @@ input[type="radio"].visually-hidden {
 // ------------------------ product -------------------------
 
 .product {
-  margin-bottom: 330px;
+  margin-bottom: 270px;
 }
 
 .product__cards-wrapper {
@@ -522,7 +525,7 @@ input[type="radio"].visually-hidden {
 // ------------------------ order -------------------------
 
 .order {
-  margin-bottom: 197px;
+  margin-bottom: 300px;
 }
 
 .order__bg {
@@ -608,7 +611,7 @@ input[type="radio"].visually-hidden {
 // ------------------------ testimonials -------------------------
 
 .testimonials {
-  margin-bottom: 178px;
+  margin-bottom: 150px;
 }
 
 .testimonials__title {
@@ -784,6 +787,7 @@ input[type="radio"].visually-hidden {
 }
 
 .page-footer__wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -792,9 +796,77 @@ input[type="radio"].visually-hidden {
   section {
     width: 270px;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: #dddddd;
+  }
 }
 
-.weinsocial__text {
-  margin: 0;
-  margin-top: 34px;
+.weinsocial__logo {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.weinsocial__text,
+.opening-hours__text,
+.contact-us__text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.weinsocial__social {
+  width: 270px;
+  margin-top: 23px;
+  margin-bottom: 10px;
+}
+
+.opening-hours__text {
+  width: 216px;
+}
+
+.opening-hours__title,
+.user-link__title,
+.contact-us__title {
+  margin-top: 15px;
+
+  margin-bottom: 46px;
+  font-size: 22px;
+  color: #000;
+}
+
+.opening-hours__text,
+.user-link__item,
+.contact-us__text {
+  line-height: 28px;
+}
+
+.user-link__item a {
+  font-family: "ProductSans-regular", sans-serif, serif;
+  color: $gray-text;
+
+  &:hover {
+    color: $bright-orange;
+    font-family: "ProductSans-bold", sans-serif, serif;
+  }
+}
+
+.contact-us__text {
+  width: 156px;
+}
+
+.contact-us__form {
+  margin-top: 20px;
+}
+
+.page-footer__copyright {
+  text-align: center;
+}
+
+.copyright {
+  font-size: 15px;
 }

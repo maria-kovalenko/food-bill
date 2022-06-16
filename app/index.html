@@ -10,7 +10,7 @@
 
   <body>
     <!------------------ header ----------------------------->
-    <header class="container font-fam">
+    <header class="container">
       <nav class="page-header__nav">
         <a href="index.html" class="page-header__logo"
           ><img
@@ -536,7 +536,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <section class="weinsocial">
-          <a href="index.html" class="page-header__logo"
+          <a href="index.html" class="weinsocial__logo page-header__logo"
             ><img
               class="page-header__image"
               src="./img/logo.svg"
@@ -568,6 +568,7 @@
                 </svg>
               </a>
             </li>
+
             <li class="social__item">
               <a class="social__link" href="#"
                 ><span class="visually-hidden">instagram</span>
@@ -626,15 +627,16 @@
         </section>
 
         <section class="opening-hours">
-          <h3>Opening Restaurant</h3>
+          <h3 class="opening-hours__title">Opening Restaurant</h3>
           <p class="opening-hours__text">
-            Sa - We: 09:00am - 10:00pm Thursday: 09:00am - 05:00pm Friday:
-            Closed
+            Sa - We: 09:00am - 10:00pm<br />
+            Thursday: 09:00am - 05:00pm<br />
+            Friday: Closed
           </p>
         </section>
 
         <section class="user-link">
-          <h3>User Link</h3>
+          <h3 class="user-link__title">User Link</h3>
           <ul class="user-link__list">
             <li class="user-link__item"><a href="#">About Us</a></li>
             <li class="user-link__item"><a href="#">Contact Us</a></li>
@@ -645,7 +647,7 @@
         </section>
 
         <section class="contact-us">
-          <h3>Contact Us</h3>
+          <h3 class="contact-us__title">Contact Us</h3>
           <p class="contact-us__text">
             543 Country Club Ave, NC 27587, London, UK +1259 6541120
           </p>
@@ -654,7 +656,7 @@
               class="contact-us__input form-input"
               type="email"
               name="email"
-              placeholder="Type your email..."
+              placeholder="Enter your email..."
             />
             <button type="submit" class="contact-us__button form-button">
               <svg style="display: none">
@@ -671,6 +673,9 @@
             </button>
           </form>
         </section>
+      </div>
+      <div class="page-footer__copyright container">
+        <p class="copyright">Copyrights© 2021 Food Bill All rights reserved.</p>
       </div>
     </footer>
   </body>
