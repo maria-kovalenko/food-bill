@@ -226,7 +226,12 @@ input[type=radio].visually-hidden {
   margin-bottom: 59px
 }
 .home {
-  margin-bottom: 200px
+  margin-bottom: 150px
+}
+@media (max-width:1280px) {
+  .home {
+    margin-bottom: 140px
+  }
 }
 .home__wrapper {
   width: 570px;
@@ -386,6 +391,11 @@ input[type=radio].visually-hidden {
 .how-to-work {
   margin-bottom: 170px
 }
+@media (max-width:1280px) {
+  .how-to-work {
+    margin-bottom: 140px
+  }
+}
 .how-to-work__image-wrapper {
   position: relative
 }
@@ -393,22 +403,70 @@ input[type=radio].visually-hidden {
   position: absolute;
   width: 70%;
   top: -80px;
-  left: -200px;
+  left: -15%;
   z-index: -1
 }
+@media (min-width:1650px) {
+  .how-to-work__image {
+    position: absolute;
+    width: 90%;
+    top: -120px;
+    left: -35%;
+    z-index: -1
+  }
+}
 .how-to-work__wrapper {
-  width: 570px;
+  width: 50%;
   margin-bottom: 40px;
   margin-left: auto
 }
+@media (max-width:1280px) {
+  .how-to-work__wrapper {
+    width: 100%;
+    margin-left: 0
+  }
+}
 .how-to-work__title {
-  width: 527px;
   margin: 0;
   margin-bottom: 24px
+}
+@media (max-width:1280px) {
+  .how-to-work__name {
+    width: 50%;
+    margin-left: auto
+  }
+  .how-to-work__title {
+    width: 50%;
+    margin-left: auto
+  }
+}
+@media (max-width:1280px) {
+  .how-to-work__title {
+    width: 50%;
+    margin-left: auto
+  }
 }
 .how-to-work__description {
   margin: 0;
   margin-top: 10px
+}
+@media (min-width:768px) and (max-width:820px) {
+  .how-to-work__description {
+    margin-top: 7%
+  }
+}
+@media (min-width:821px) and (max-width:1000px) {
+  .how-to-work__title {
+    margin-bottom: 10%
+  }
+}
+@media (min-width:1001px) and (max-width:1280px) {
+  .how-to-work__wrapper {
+    padding-top: 10%
+  }
+  .how-to-work__title {
+    margin-bottom: 10%
+  }
 }
 .how-to-work__button {
   margin-top: 29px
