@@ -636,15 +636,18 @@ input[type=radio].visually-hidden {
 }
 .order {
   position: relative;
-  height: 300px;
-  margin-bottom: 300px;
+  height: 370px;
+  margin-bottom: 200px
+}
+.black-bg {
   background: url(../../../img/black-bg-order.png);
-  padding: 7% 0 0 3%;
+  padding: 7% 0 0 0;
   border-radius: 60px 0 60px 0
 }
-.order__bg {
+.order__wrapper-common {
   position: absolute;
-  width: 95%
+  width: 96%;
+  left: 4%
 }
 .order__title {
   width: 40%;
@@ -658,7 +661,7 @@ input[type=radio].visually-hidden {
     margin-bottom: 3%
   }
 }
-.order__wrapper {
+.order__wrapper-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,7 +676,7 @@ input[type=radio].visually-hidden {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 100%;
-  width: 50%
+  width: 53%
 }
 .order__button {
   display: -webkit-box;
@@ -706,11 +709,6 @@ input[type=radio].visually-hidden {
   box-shadow: inset 0 0 5px 2px rgba(0,0,0,.5);
   border: 1px solid #000
 }
-@media (min-width:768px) and (max-width:1279px) {
-  .order__button {
-    height: auto
-  }
-}
 .order__text {
   min-width: 110px;
   margin: 0;
@@ -727,7 +725,7 @@ input[type=radio].visually-hidden {
 }
 .order__photo-menu {
   width: 277px;
-  margin-top: -27%;
+  margin-top: -19%;
   margin-right: 40px;
   margin-left: 40px
 }
@@ -737,7 +735,7 @@ input[type=radio].visually-hidden {
   margin-right: 40px
 }
 .testimonials {
-  margin-bottom: 150px
+  margin-bottom: 100px
 }
 .testimonials__image-wrapper {
   position: relative
@@ -746,8 +744,21 @@ input[type=radio].visually-hidden {
   position: absolute;
   width: 28%;
   top: -80px;
-  left: -140px;
+  left: -10%;
   z-index: -1
+}
+@media (min-width:1279px) {
+  .testimonials__image {
+    width: 25%;
+    top: -130px
+  }
+}
+@media (min-width:1650px) {
+  .testimonials__image {
+    width: 37%;
+    top: -130px;
+    left: -34%
+  }
 }
 .testimonials__title {
   margin: 0;
@@ -759,7 +770,10 @@ input[type=radio].visually-hidden {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
 }
 .testimonials__left-wrapper {
   width: 570px;
@@ -820,25 +834,31 @@ input[type=radio].visually-hidden {
   width: 570px
 }
 .subscribe {
+  position: relative;
+  height: 270px;
   margin-bottom: 100px
 }
 .subscribe__wrapper {
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 0
 }
 .subscribe__image-wrapper {
-  position: absolute;
-  top: calc(50% - 250px);
-  width: 460px;
-  margin-left: 30px
+  width: 42%
 }
 .subscribe__text-wrapper {
-  width: 505px;
-  margin-left: auto;
-  margin-right: 70px;
+  width: 46%;
+  margin-right: 30px;
   padding-top: 50px;
   padding-bottom: 50px
 }
@@ -907,6 +927,8 @@ input[type=radio].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -924,6 +946,13 @@ input[type=radio].visually-hidden {
   bottom: 0;
   background-color: #ddd
 }
+@media (min-width:768px) and (max-width:953px) {
+  .page-footer__wrapper {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly
+  }
+}
 .weinsocial__logo {
   display: inline-block;
   margin-bottom: 24px
@@ -935,12 +964,8 @@ input[type=radio].visually-hidden {
   margin-bottom: 10px
 }
 .weinsocial__social {
-  width: 270px;
   margin-top: 23px;
   margin-bottom: 10px
-}
-.opening-hours__text {
-  width: 216px
 }
 .contact-us__title,
 .opening-hours__title,
