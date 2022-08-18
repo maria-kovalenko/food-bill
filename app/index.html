@@ -10,9 +10,20 @@
 
   <body>
     <!------------------ header ----------------------------->
-    <header class="container">
-      <nav class="page-header__nav">
-        <a href="index.html" class="page-header__logo"
+    <header class="page-header container">
+      <div class="page-header__logo-wrapper">
+       <a href="index.html" class="page-header__logo"
+          ><img
+            class="page-header__image"
+            src="./img/logo.svg"
+            width="162"
+            height="45"
+            alt="logo"
+        /></a>
+</div>
+
+      <nav class="page-header__nav page-header__nav--opened">
+        <a href="index.html" class="page-header__logo logo-menu"
           ><img
             class="page-header__image"
             src="./img/logo.svg"
@@ -21,7 +32,7 @@
             alt="logo"
         /></a>
 
-        <div class="page-header__wrapper">
+        <div class="page-header__wrapper page-header__wrapper--opened">
           <ul class="page-header__list">
             <li class="page-header__item page-header__item--active">
               <a href="#">Home</a>
@@ -512,8 +523,8 @@
             <img
               src="../img/testimonials-img.png"
               class="testimonials__dish"
-              width="569"
-              height="483"
+              width="358"
+              height="303"
               alt="Рекомендованное блюдо"
             />
           </div>
